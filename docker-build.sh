@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION=1.0.10
+VERSION=1.2.0
 
 rm -fr build/web
 
@@ -9,5 +9,5 @@ cd scripts && go run main.go ../build/web/main.dart.js && cd ..
 rm -fr build/web/fonts/ && mkdir build/web/fonts
 cp -r scripts/s build/web/fonts/s
 
-docker buildx build --platform=linux/amd64,linux/arm64 -t mylxsw/aidea-web:$VERSION . --push
+docker buildx build --platform=linux/amd64,linux/arm64 -t holygeek00/ai-assist-client:$VERSION . --push
 
